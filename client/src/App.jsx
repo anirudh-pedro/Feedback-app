@@ -1,12 +1,33 @@
 import React from 'react'
-import './App.css'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import { Routes, BrowserRouter, Route } from 'react-router-dom'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
+// import { useContext } from 'react'
+
 
 function App() {
-
   return (
-    <>
-      <h1 className='title bg-amber-500 '>Vite + React</h1>
-    </>
+    <BrowserRouter>
+      <ToastContainer
+        position="top-right"
+        autoClose={3000}
+        hideProgressBar={false}
+        newestOnTop
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
+      <Routes>
+        <Route path='/' element={<Register />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/login' element={<Login />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
