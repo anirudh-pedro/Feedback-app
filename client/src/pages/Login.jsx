@@ -46,7 +46,7 @@ const Login = () => {
   return (
     <div className='min-h-screen flex items-center justify-center bg-gray-900 p-4'>
       <div className='w-full max-w-sm'>
-        <div className='bg-gray-800 border border-gray-700 rounded-lg shadow-lg p-6'>
+        <div className='bg-black border border-gray-800 rounded-lg shadow-lg p-6'>
           {/* Header */}
           <div className='text-center mb-6'>
             <div className='w-12 h-12 bg-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center'>
