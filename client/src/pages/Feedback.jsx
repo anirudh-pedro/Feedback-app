@@ -17,7 +17,6 @@ const Feedback = () => {
   const [generatedLink, setGeneratedLink] = useState('')
   const [viewMode, setViewMode] = useState('grid') // grid or list
   
-  // Sample feedback forms data
   const [feedbackForms] = useState([
     {
       id: "tech-meetup",
