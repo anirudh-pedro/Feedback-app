@@ -15,6 +15,10 @@ import bcrypt from "bcryptjs";
     required: true,
     unique: true,
   },
+    refreshToken: {
+    type: String,
+    default: null,
+  },
     createdAt: {
     type: Date,
     default: Date.now,
