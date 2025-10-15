@@ -22,7 +22,6 @@ const Login = () => {
     
     const EmailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     
-    // Add your login logic here
     if (!EmailRegex.test(formData.email)) {
       toast.error('Invalid email format.')
       return;
@@ -33,7 +32,6 @@ const Login = () => {
       return;
     }
     
-    // If all validations pass
     await authAPI.login(formData)
     setFormData({ email: '', password: '' })
     setShowPassword(false)
@@ -47,7 +45,6 @@ const Login = () => {
     <div className='min-h-screen flex items-center justify-center bg-gray-900 p-4'>
       <div className='w-full max-w-sm'>
         <div className='bg-gray-800 border border-gray-700 rounded-lg shadow-lg p-6'>
-          {/* Header */}
           <div className='text-center mb-6'>
             <div className='w-12 h-12 bg-blue-600 rounded-lg mx-auto mb-3 flex items-center justify-center'>
               <svg className='w-6 h-6 text-white' fill='none' stroke='currentColor' viewBox='0 0 24 24'>
@@ -58,9 +55,7 @@ const Login = () => {
             <p className='text-gray-400 text-sm'>Sign in to your account</p>
           </div>
 
-          {/* Form */}
           <form onSubmit={handleSubmit} className='space-y-4'>
-            {/* Email Field */}
             <div>
               <label className='block text-sm font-medium text-gray-300 mb-1'>Email</label>
               <div className='relative'>
@@ -81,7 +76,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Password Field */}
             <div>
               <label className='block text-sm font-medium text-gray-300 mb-1'>Password</label>
               <div className='relative'>
@@ -113,7 +107,6 @@ const Login = () => {
               </div>
             </div>
 
-            {/* Remember Me and Forgot Password */}
             <div className='flex items-center justify-between text-sm'>
               <div className='flex items-center'>
                 <input
@@ -133,7 +126,6 @@ const Login = () => {
               </a>
             </div>
 
-            {/* Submit Button */}
             <button
               type='submit'
               className='w-full bg-blue-600 text-white font-medium py-2 px-4 rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-gray-800'
@@ -141,7 +133,6 @@ const Login = () => {
               Sign In
             </button>
 
-            {/* Register Link */}
             <div className='text-center mt-4'>
               <p className='text-gray-400 text-sm'>
                 Don't have an account?{' '}

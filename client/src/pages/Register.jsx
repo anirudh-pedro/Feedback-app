@@ -58,7 +58,7 @@ const Register = () => {
       
       toast.success(response.message || 'Registration successful!');
       console.log('Registration response:', response);
-      navigate('/login'); // Navigate to login after successful registration
+      navigate('/login'); 
     } catch (error) {
       const errorMessage = error.message || 'Registration failed. Please try again.';
       toast.error(errorMessage);
